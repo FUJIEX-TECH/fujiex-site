@@ -299,11 +299,13 @@ body {
 
 .service-num {
   display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  color: var(--purple);
-  margin-bottom: 36px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(40px, 4vw, 64px);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  color: var(--n7);
+  line-height: 1;
+  margin-bottom: 24px;
 }
 
 .service-title {
