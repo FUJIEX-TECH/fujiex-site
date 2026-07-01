@@ -28,7 +28,6 @@
 :root {
   --black:  #0A0A0A;
   --white:  #FAFAFA;
-  --purple: #7C3AED;
   --n4: #858585;
   --n6: #3d3d3d;
   --n7: #2a2a2a;
@@ -131,30 +130,34 @@ body {
   align-items: center;
   font-family: 'Inter', sans-serif;
   font-size: 13px;
-  font-weight: 500;
   letter-spacing: 0.04em;
   padding: 14px 28px;
+  border: 1px solid transparent;
   text-decoration: none;
-  transition: background 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease);
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease), background 0.3s var(--ease);
 }
 
-.btn--purple {
-  background: var(--purple);
-  color: var(--white);
-}
-.btn--purple:hover {
+/* Primária: peso cheio, fundo branco sólido — sem roxo, sem opacidade */
+.btn--primary {
   background: var(--white);
   color: var(--black);
+  font-weight: 700;
+}
+.btn--primary:hover {
+  background: transparent;
+  color: var(--white);
+  border-color: var(--white);
 }
 
+/* Secundária: contorno + peso regular. Hover ganha peso em vez de preenchimento */
 .btn--ghost {
   background: transparent;
   color: var(--white);
-  border: 1px solid var(--n6);
+  font-weight: 400;
+  border-color: var(--n6);
 }
 .btn--ghost:hover {
-  background: var(--white);
-  color: var(--black);
+  font-weight: 600;
   border-color: var(--white);
 }
 
