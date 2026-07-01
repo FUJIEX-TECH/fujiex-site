@@ -1,6 +1,12 @@
 /* ── FONTS ── */
 @font-face {
   font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: block;
+}
+@font-face {
+  font-family: 'Space Grotesk';
   src: url('fonts/SpaceGrotesk-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: block;
@@ -9,6 +15,12 @@
   font-family: 'Space Grotesk';
   src: url('fonts/SpaceGrotesk-Bold.ttf') format('truetype');
   font-weight: 700;
+  font-display: block;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Light.woff2') format('woff2');
+  font-weight: 300;
   font-display: block;
 }
 @font-face {
@@ -28,7 +40,6 @@
 :root {
   --black:  #0A0A0A;
   --white:  #FAFAFA;
-  --n4: #858585;
   --n6: #3d3d3d;
   --n7: #2a2a2a;
   --n8: #1a1a1a;
@@ -90,11 +101,11 @@ body {
 /* ── LABEL ── */
 .label {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--n4);
+  color: var(--white);
   display: block;
 }
 
@@ -119,9 +130,10 @@ body {
 
 .section-desc {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: clamp(13px, 1vw, 15px);
   line-height: 1.75;
-  color: var(--n4);
+  color: var(--white);
 }
 
 /* ── BUTTONS ── */
@@ -205,13 +217,14 @@ body {
 
 .nav-links a {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: 12px;
   letter-spacing: 0.06em;
-  color: var(--n4);
+  color: var(--white);
   text-decoration: none;
-  transition: color 0.3s var(--ease);
+  transition: font-weight 0.15s var(--ease);
 }
-.nav-links a:hover { color: var(--white); }
+.nav-links a:hover { font-weight: 500; }
 
 /* ── HERO ── */
 .hero {
@@ -233,14 +246,16 @@ body {
 
 .hero-headline em {
   font-style: normal;
-  color: var(--n6);
+  font-weight: 300;
+  color: var(--white);
 }
 
 .hero-sub {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: clamp(14px, 1.2vw, 17px);
   line-height: 1.7;
-  color: var(--n4);
+  color: var(--white);
   margin-bottom: 48px;
 }
 
@@ -258,10 +273,11 @@ body {
   align-items: center;
   gap: 16px;
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--n6);
+  color: var(--white);
 }
 
 .scroll-hint::before {
@@ -274,9 +290,10 @@ body {
 
 .hero-url {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: 11px;
   letter-spacing: 0.1em;
-  color: var(--n7);
+  color: var(--white);
 }
 
 /* ── SERVICES ── */
@@ -304,9 +321,9 @@ body {
   display: block;
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(40px, 4vw, 64px);
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: -0.06em;
-  color: var(--n7);
+  color: var(--white);
   line-height: 1;
   margin-bottom: 24px;
 }
@@ -322,9 +339,10 @@ body {
 
 .service-desc {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: 13px;
   line-height: 1.7;
-  color: var(--n4);
+  color: var(--white);
   margin-bottom: 32px;
 }
 
@@ -337,9 +355,10 @@ body {
 
 .service-items li {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: 12px;
   letter-spacing: 0.03em;
-  color: var(--n6);
+  color: var(--white);
 }
 
 /* ── PROCESS ── */
@@ -367,9 +386,9 @@ body {
 .process-num {
   font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(40px, 4vw, 64px);
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: -0.06em;
-  color: var(--n7);
+  color: var(--white);
   line-height: 1;
   padding-top: 2px;
 }
@@ -385,9 +404,10 @@ body {
 
 .process-text {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: 13px;
   line-height: 1.75;
-  color: var(--n4);
+  color: var(--white);
   max-width: 540px;
 }
 
@@ -478,10 +498,11 @@ body {
 .team-photo-placeholder::after {
   content: 'Foto';
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--n7);
+  color: var(--white);
 }
 
 .team-info {
@@ -518,9 +539,10 @@ body {
 
 .cta-sub {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: clamp(14px, 1.1vw, 16px);
   line-height: 1.7;
-  color: var(--n4);
+  color: var(--white);
   margin-bottom: 48px;
   max-width: 420px;
 }
@@ -546,10 +568,11 @@ body {
 .footer-nav-label {
   display: block;
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--n6);
+  color: var(--white);
   margin-bottom: 20px;
 }
 
@@ -562,13 +585,14 @@ body {
 
 .footer-links a {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: 13px;
   letter-spacing: 0.02em;
-  color: var(--n4);
+  color: var(--white);
   text-decoration: none;
-  transition: color 0.3s var(--ease);
+  transition: font-weight 0.15s var(--ease);
 }
-.footer-links a:hover { color: var(--white); }
+.footer-links a:hover { font-weight: 500; }
 
 .footer-social {
   list-style: none;
@@ -579,13 +603,14 @@ body {
 
 .footer-social a {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: 13px;
   letter-spacing: 0.02em;
-  color: var(--n4);
+  color: var(--white);
   text-decoration: none;
-  transition: color 0.3s var(--ease);
+  transition: font-weight 0.15s var(--ease);
 }
-.footer-social a:hover { color: var(--white); }
+.footer-social a:hover { font-weight: 500; }
 
 .footer-bottom {
   padding: 24px var(--pad);
@@ -596,9 +621,10 @@ body {
 
 .footer-copy {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   font-size: 11px;
   letter-spacing: 0.04em;
-  color: var(--n6);
+  color: var(--white);
 }
 
 /* ── RESPONSIVE ── */
