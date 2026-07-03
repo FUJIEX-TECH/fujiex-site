@@ -207,11 +207,19 @@ body {
 
 /* ── HERO ── */
 .hero {
-  position: relative;
   height: 100vh;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto;
-  padding: 160px var(--pad) 64px;
+  grid-template-areas:
+    "media content"
+    "foot  foot";
+  overflow: hidden;
+}
+
+.hero-media {
+  grid-area: media;
+  position: relative;
   overflow: hidden;
 }
 
@@ -221,39 +229,32 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
 }
 
 .hero-video-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(10, 10, 10, 0.7);
-  z-index: 1;
+  background: rgba(10, 10, 10, 0.25);
 }
 
-.hero-body,
-.hero-foot {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-body {
+.hero-content {
+  grid-area: content;
+  background: var(--black);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  padding: 0 64px;
 }
 
 .hero-headline {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
-  font-size: clamp(20px, 2.2vw, 30px);
-  letter-spacing: -0.02em;
-  line-height: 1.3;
+  font-size: clamp(26px, 2.2vw, 40px);
+  letter-spacing: -0.025em;
+  line-height: 1.25;
   color: var(--white);
-  max-width: 480px;
-  margin-bottom: 16px;
+  max-width: 440px;
+  margin-bottom: 20px;
 }
 
 .hero-headline em {
@@ -263,20 +264,21 @@ body {
 
 .hero-sub {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(11px, 0.9vw, 13px);
+  font-size: clamp(13px, 1vw, 15px);
   line-height: 1.6;
   color: var(--white);
-  margin-bottom: 24px;
-  max-width: 320px;
+  margin-bottom: 28px;
+  max-width: 360px;
 }
 
-.hero-cta { display: flex; justify-content: center; }
+.hero-cta { display: flex; }
 
 .hero-foot {
+  grid-area: foot;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 64px;
+  padding: 24px var(--pad);
 }
 
 .scroll-hint {
@@ -648,10 +650,22 @@ body {
 
   .nav-links { display: none; }
 
-  .hero { padding-top: 120px; }
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: 40vh 1fr auto;
+    grid-template-areas:
+      "media"
+      "content"
+      "foot";
+  }
+
+  .hero-content {
+    padding: 40px var(--pad);
+    justify-content: flex-start;
+  }
 
   .hero-headline {
-    font-size: clamp(40px, 11vw, 80px);
+    max-width: none;
   }
 
   .team-grid {
