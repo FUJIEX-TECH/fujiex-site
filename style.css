@@ -317,7 +317,6 @@ body {
 /* ── SERVICES ── */
 .services {
   padding: 120px var(--pad);
-  border-top: 1px solid var(--n8);
 }
 
 .services-grid {
