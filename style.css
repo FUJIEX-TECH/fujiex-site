@@ -28,6 +28,7 @@
 :root {
   --black:  #0A0A0A;
   --white:  #FAFAFA;
+  --n4: #858585;
   --n6: #3d3d3d;
   --n7: #2a2a2a;
   --n8: #1a1a1a;
@@ -93,7 +94,7 @@ body {
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--n4);
   display: block;
 }
 
@@ -118,10 +119,9 @@ body {
 
 .section-desc {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: clamp(13px, 1vw, 15px);
   line-height: 1.75;
-  color: var(--white);
+  color: var(--n4);
 }
 
 /* ── BUTTONS ── */
@@ -205,14 +205,13 @@ body {
 
 .nav-links a {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 12px;
   letter-spacing: 0.06em;
-  color: var(--white);
+  color: var(--n4);
   text-decoration: none;
-  transition: font-weight 0.15s var(--ease);
+  transition: color 0.3s var(--ease);
 }
-.nav-links a:hover { font-weight: 500; }
+.nav-links a:hover { color: var(--white); }
 
 /* ── HERO ── */
 .hero {
@@ -240,10 +239,9 @@ body {
 
 .hero-sub {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: clamp(14px, 1.2vw, 17px);
   line-height: 1.7;
-  color: var(--white);
+  color: var(--n4);
   margin-bottom: 48px;
 }
 
@@ -261,11 +259,10 @@ body {
   align-items: center;
   gap: 16px;
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--n6);
 }
 
 .scroll-hint::before {
@@ -278,10 +275,9 @@ body {
 
 .hero-url {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 11px;
   letter-spacing: 0.1em;
-  color: var(--white);
+  color: var(--n7);
 }
 
 /* ── SERVICES ── */
@@ -327,10 +323,9 @@ body {
 
 .service-desc {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 13px;
   line-height: 1.7;
-  color: var(--white);
+  color: var(--n4);
   margin-bottom: 32px;
 }
 
@@ -343,10 +338,9 @@ body {
 
 .service-items li {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 12px;
   letter-spacing: 0.03em;
-  color: var(--white);
+  color: var(--n6);
 }
 
 /* ── PROCESS ── */
@@ -392,10 +386,9 @@ body {
 
 .process-text {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 13px;
   line-height: 1.75;
-  color: var(--white);
+  color: var(--n4);
   max-width: 540px;
 }
 
@@ -486,11 +479,10 @@ body {
 .team-photo-placeholder::after {
   content: 'Foto';
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--n7);
 }
 
 .team-info {
@@ -527,10 +519,9 @@ body {
 
 .cta-sub {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: clamp(14px, 1.1vw, 16px);
   line-height: 1.7;
-  color: var(--white);
+  color: var(--n4);
   margin-bottom: 48px;
   max-width: 420px;
 }
@@ -556,11 +547,10 @@ body {
 .footer-nav-label {
   display: block;
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--n6);
   margin-bottom: 20px;
 }
 
@@ -573,14 +563,13 @@ body {
 
 .footer-links a {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 13px;
   letter-spacing: 0.02em;
-  color: var(--white);
+  color: var(--n4);
   text-decoration: none;
-  transition: font-weight 0.15s var(--ease);
+  transition: color 0.3s var(--ease);
 }
-.footer-links a:hover { font-weight: 500; }
+.footer-links a:hover { color: var(--white); }
 
 .footer-social {
   list-style: none;
@@ -591,14 +580,13 @@ body {
 
 .footer-social a {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 13px;
   letter-spacing: 0.02em;
-  color: var(--white);
+  color: var(--n4);
   text-decoration: none;
-  transition: font-weight 0.15s var(--ease);
+  transition: color 0.3s var(--ease);
 }
-.footer-social a:hover { font-weight: 500; }
+.footer-social a:hover { color: var(--white); }
 
 .footer-bottom {
   padding: 24px var(--pad);
@@ -609,10 +597,9 @@ body {
 
 .footer-copy {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 11px;
   letter-spacing: 0.04em;
-  color: var(--white);
+  color: var(--n6);
 }
 
 /* ── RESPONSIVE ── */
