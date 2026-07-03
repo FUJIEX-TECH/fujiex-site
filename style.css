@@ -252,6 +252,16 @@ body {
   background: rgba(10, 10, 10, 0.78);
 }
 
+.hero-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, transparent, var(--black));
+  pointer-events: none;
+}
+
 .hero-body,
 .hero-foot {
   position: relative;
