@@ -671,3 +671,131 @@ body {
   }
 
 }
+
+/* ── CHAT ── */
+.chat-widget {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.chat-toggle {
+  width: 52px;
+  height: 52px;
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-toggle svg {
+  width: 22px;
+  height: 22px;
+}
+
+.chat-panel {
+  display: none;
+  flex-direction: column;
+  width: 320px;
+  height: 420px;
+  background: var(--black);
+  border: 1px solid var(--n6);
+}
+
+.chat-widget.open .chat-panel { display: flex; }
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--n8);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--white);
+}
+
+.chat-close {
+  background: none;
+  border: none;
+  color: var(--white);
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-msg {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 10px 12px;
+  max-width: 85%;
+}
+
+.chat-msg--bot {
+  background: var(--n8);
+  color: var(--white);
+  align-self: flex-start;
+}
+
+.chat-msg--user {
+  background: var(--white);
+  color: var(--black);
+  align-self: flex-end;
+  font-weight: 500;
+}
+
+.chat-form {
+  display: flex;
+  border-top: 1px solid var(--n8);
+}
+
+.chat-form input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 12px 14px;
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+}
+
+.chat-form input:focus { outline: none; }
+
+.chat-form button {
+  background: none;
+  border: none;
+  color: var(--white);
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-form button svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 768px) {
+  .chat-panel {
+    width: calc(100vw - 48px);
+  }
+}
