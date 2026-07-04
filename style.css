@@ -609,19 +609,21 @@ body {
 .footer-social {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction: row;
+  gap: 16px;
 }
 
 .footer-social a {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.02em;
+  display: flex;
   color: var(--white);
-  text-decoration: none;
-  transition: color 0.3s var(--ease);
+  transition: transform 0.3s var(--ease);
 }
-.footer-social a:hover { color: var(--white); }
+.footer-social a:hover { transform: scale(1.15); }
+
+.footer-social a svg {
+  width: 20px;
+  height: 20px;
+}
 
 .footer-bottom {
   padding: 24px var(--pad);
