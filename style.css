@@ -480,7 +480,7 @@ body {
 
 .team-photo {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   position: relative;
 }
@@ -489,6 +489,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
   filter: grayscale(100%);
   transition: filter 0.5s var(--ease), transform 0.5s var(--ease);
@@ -531,10 +532,18 @@ body {
   margin-bottom: 8px;
 }
 
-.team-bio {
+.team-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.team-desc {
   font-family: 'Inter', sans-serif;
   font-size: 13px;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--white);
 }
 
