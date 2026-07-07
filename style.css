@@ -439,29 +439,27 @@ body {
 .clients-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 1px;
-  background: var(--n8);
+  gap: 40px;
 }
 
 .client-logo {
-  background: var(--black);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 32px;
-  transition: background 0.4s var(--ease);
+  padding: 24px 20px;
 }
-
-.client-logo:hover { background: var(--n8); }
 
 .client-logo img {
   display: block;
   width: 100%;
-  max-width: 220px;
-  height: 72px;
+  max-width: 170px;
+  height: 64px;
   object-fit: contain;
   filter: brightness(0) invert(1);
+  transition: transform 0.3s var(--ease);
 }
+
+.client-logo:hover img { transform: scale(1.06); }
 
 /* ── TEAM ── */
 .team {
