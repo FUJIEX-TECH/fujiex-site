@@ -210,8 +210,8 @@ body {
 .nav-toggle {
   display: none;
   position: relative;
-  width: 24px;
-  height: 16px;
+  width: 18px;
+  height: 12px;
   background: none;
   border: none;
   padding: 0;
@@ -226,16 +226,21 @@ body {
   transition: transform 0.3s var(--ease), top 0.3s var(--ease);
 }
 
-.nav-toggle span:first-child { top: 0; }
-.nav-toggle span:last-child { top: 15px; }
+.nav-toggle span:nth-child(1) { top: 0; }
+.nav-toggle span:nth-child(2) { top: 5.5px; }
+.nav-toggle span:nth-child(3) { top: 11px; }
 
-.nav.open .nav-toggle span:first-child {
-  top: 7px;
+.nav.open .nav-toggle span:nth-child(1) {
+  top: 5.5px;
   transform: rotate(45deg);
 }
 
-.nav.open .nav-toggle span:last-child {
-  top: 7px;
+.nav.open .nav-toggle span:nth-child(2) {
+  transform: scaleX(0);
+}
+
+.nav.open .nav-toggle span:nth-child(3) {
+  top: 5.5px;
   transform: rotate(-45deg);
 }
 
@@ -670,6 +675,11 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 32px;
+  }
+
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
@@ -713,6 +723,10 @@ body {
 
   .team-grid {
     grid-template-columns: 1fr;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .process-step {
