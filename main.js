@@ -21,13 +21,17 @@
   });
 
   /* ── LOCOMOTIVE SCROLL ── */
+  /* Scroll suave (transform) trava o repaint de <video> no iOS Safari.
+     Em dispositivos touch usamos scroll nativo, que não tem esse bug. */
+  var isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
   /* Delay de 500ms após window.load para fontes e layout estabilizarem */
   window.addEventListener('load', function () {
     setTimeout(function () {
 
       var locoScroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
+        smooth: !isTouch,
         multiplier: 0.85,
         lerp: 0.08
       });

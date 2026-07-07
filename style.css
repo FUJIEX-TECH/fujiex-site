@@ -281,11 +281,11 @@ body {
 .hero-headline {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
-  font-size: clamp(28px, 3vw, 48px);
-  letter-spacing: -0.025em;
-  line-height: 1.2;
+  font-size: clamp(36px, 4.2vw, 68px);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
   color: var(--white);
-  max-width: 560px;
+  max-width: 680px;
   margin-bottom: 20px;
 }
 
@@ -340,6 +340,10 @@ body {
   background: var(--black);
   padding: 48px 40px 56px;
   transition: background 0.4s var(--ease);
+}
+
+.service-card:first-child {
+  padding-left: 0;
 }
 
 .service-card:hover { background: var(--n8); }
@@ -413,16 +417,16 @@ body {
 .process-title {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
-  font-size: clamp(16px, 1.4vw, 22px);
-  letter-spacing: -0.02em;
+  font-size: clamp(18px, 1.6vw, 26px);
+  letter-spacing: -0.03em;
   color: var(--white);
   margin-bottom: 10px;
 }
 
 .process-text {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  line-height: 1.75;
+  font-size: clamp(13px, 1vw, 15px);
+  line-height: 1.6;
   color: var(--white);
 }
 
@@ -434,7 +438,7 @@ body {
 
 .clients-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 1px;
   background: var(--n8);
 }
@@ -452,23 +456,18 @@ body {
 
 .client-logo img {
   display: block;
-  width: 160px;
-  height: 52px;
+  width: 100%;
+  max-width: 220px;
+  height: 72px;
   object-fit: contain;
   filter: brightness(0) invert(1);
-  opacity: 0.35;
-  transition: opacity 0.4s var(--ease);
 }
-
-.client-logo:hover img { opacity: 0.9; }
 
 /* ── TEAM ── */
 .team {
   padding: 120px var(--pad);
   border-top: 1px solid var(--n8);
 }
-
-.team .label { margin-bottom: 64px; }
 
 .team-grid {
   display: grid;
@@ -537,14 +536,6 @@ body {
   font-size: 12px;
   letter-spacing: 0.02em;
   color: var(--white);
-  margin-bottom: 6px;
-}
-
-.team-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  line-height: 1.5;
-  color: var(--white);
 }
 
 /* ── CTA FINAL ── */
@@ -560,11 +551,11 @@ body {
 .cta-headline {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
-  font-size: clamp(48px, 7vw, 120px);
-  letter-spacing: -0.045em;
-  line-height: 0.9;
+  font-size: clamp(36px, 4.2vw, 68px);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
   color: var(--white);
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
 
 .cta-sub {
@@ -583,43 +574,16 @@ body {
 
 .footer-top {
   padding: 64px var(--pad);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footer-brand img {
-  height: 22px;
+  height: 32px;
   width: auto;
   display: block;
 }
-
-.footer-nav-label {
-  display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--white);
-  margin-bottom: 20px;
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footer-links a {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.02em;
-  color: var(--white);
-  text-decoration: none;
-  transition: color 0.3s var(--ease);
-}
-.footer-links a:hover { color: var(--white); }
 
 .footer-social {
   list-style: none;
@@ -668,13 +632,18 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .service-card {
+    padding-left: 0;
+  }
+
   .team-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
   .footer-top {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
   }
 }
 
