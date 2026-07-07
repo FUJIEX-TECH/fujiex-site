@@ -20,6 +20,24 @@
     if (el) setTimeout(function () { el.classList.add('in'); }, 100 + i * 120);
   });
 
+  /* ── MENU MOBILE ── */
+  var nav = document.getElementById('nav');
+  var navToggle = document.getElementById('nav-toggle');
+
+  if (navToggle) {
+    navToggle.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.querySelectorAll('#nav-links a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   /* ── LOCOMOTIVE SCROLL ── */
   /* Scroll suave (transform) trava o repaint de <video> no iOS Safari.
      Em dispositivos touch usamos scroll nativo, que não tem esse bug. */
@@ -37,9 +55,9 @@
       });
 
       /* ── NAV: ocultar no scroll pra baixo, mostrar no scroll pra cima ── */
-      var nav = document.getElementById('nav');
       var lastY = 0;
       locoScroll.on('scroll', function (args) {
+        if (nav.classList.contains('open')) return;
         var y = args.scroll.y;
         nav.classList.toggle('scrolled', y > 60);
         if (y > lastY && y > 120) {
