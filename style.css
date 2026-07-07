@@ -424,7 +424,6 @@ body {
   font-size: 13px;
   line-height: 1.75;
   color: var(--white);
-  max-width: 540px;
 }
 
 /* ── CLIENTS ── */
@@ -474,8 +473,7 @@ body {
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--n8);
+  gap: 48px;
 }
 
 .team-card { background: var(--black); }
@@ -529,6 +527,14 @@ body {
   font-weight: 400;
   font-size: clamp(15px, 1.3vw, 20px);
   letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.team-bio {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
   color: var(--white);
 }
 
