@@ -1,18 +1,11 @@
 (function () {
 
-  /* ── ANIMAÇÕES ── */
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('[data-observe]').forEach(function (el) {
-    io.observe(el);
-  });
+  /* ── ANIMAÇÕES ──
+     A revelação em scroll usa o sistema nativo do Locomotive Scroll
+     (data-scroll + data-scroll-class="in"), não um IntersectionObserver
+     à parte — rodar os dois juntos causava inconsistência, já que o
+     Locomotive simula o scroll via transform (desliga o scroll nativo
+     no modo smooth) e um observer nativo pode dessincronizar disso. */
 
   /* ── HERO: entra imediatamente ── */
   ['h1', 'h2', 'h3', 'h4'].forEach(function (id, i) {
