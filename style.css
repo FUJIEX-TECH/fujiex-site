@@ -376,7 +376,7 @@ body {
 .service-card {
   background: var(--black);
   padding: 48px 40px 56px;
-  transition: background 0.4s var(--ease);
+  transition: background 0.4s var(--ease), opacity 0.9s var(--ease), transform 0.9s var(--ease);
 }
 
 .service-card:first-child {
@@ -435,7 +435,7 @@ body {
   gap: 40px;
   padding: 44px 0;
   border-bottom: 1px solid var(--n8);
-  transition: border-color 0.35s var(--ease);
+  transition: border-color 0.35s var(--ease), opacity 0.9s var(--ease), transform 0.9s var(--ease);
 }
 
 .process-step:first-child { border-top: 1px solid var(--n8); }
