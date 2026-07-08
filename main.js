@@ -1,5 +1,20 @@
 (function () {
 
+  /* ── HERO VIDEO: retry de play() ──
+     iOS Safari às vezes ignora o atributo autoplay (modo de baixo consumo,
+     ou a página voltando do cache de navegação com o vídeo pausado). Forçar
+     play() via JS e tentar de novo se ficar pausado ou ao voltar pra aba. */
+  var heroVideo = document.getElementById('hero-video');
+  if (heroVideo) {
+    var tryPlay = function () { heroVideo.play().catch(function () {}); };
+    tryPlay();
+    heroVideo.addEventListener('pause', tryPlay);
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden) tryPlay();
+    });
+    window.addEventListener('pageshow', tryPlay);
+  }
+
   /* ── ANIMAÇÕES ── */
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
